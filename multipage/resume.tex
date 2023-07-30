@@ -1,0 +1,40 @@
+\documentclass[11pt,a4paper]{article}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+\usepackage[a4paper,margin=0.5in]{geometry}
+\usepackage{fontspec}
+\usepackage{fontawesome}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{mdwlist} % Added the mdwlist package
+
+\definecolor{CarianBlue}{HTML}{2A3FFB}
+
+% Custom \crulefill command to create a line under the section heading
+\newcommand{\crulefill}{\par\noindent\raisebox{1.5pt}{\makebox[\linewidth]{\rule{\linewidth}{1pt}}}\par}
+
+% Custom \headerrow command for formatting work experience entries
+\newcommand{\headerrow}[2]{%
+  \par\medskip\noindent
+  \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+    #1 & #2 \\
+  \end{tabular*}
+  \par\medskip
+}
+
+% ...
+
+\begin{document}
+
+\input{header.tex}
+\input{professional_summary.tex}
+\input{work_experience.tex}
+\input{education.tex}
+\input{technical_skills.tex}
+\input{certifications.tex}
+\input{professional_memberships.tex}
+\input{additional_information.tex}
+\input{references.tex}
+
+\end{document}
